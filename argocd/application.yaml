@@ -6,7 +6,7 @@ metadata:
   annotations:
     argocd-image-updater.argoproj.io/image-list: tnhmar/spring-hello-app
     argocd-image-updater.argoproj.io/tnhmar_spring-hello-app.update-strategy: digest
-    argocd-image-updater.argoproj.io/write-back-method: git
+    argocd-image-updater.argoproj.io/write-back-method: argocd
     argocd-image-updater.argoproj.io/spring-hello.values: image.digest
 
 spec:
