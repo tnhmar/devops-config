@@ -1,0 +1,30 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: spring-hello
+  namespace: argocd
+  annotations:
+    argocd-image-updater.argoproj.io/image-list: tnhmar/spring-hello-app
+    argocd-image-updater.argoproj.io/your-dockerhub-username_spring-hello-app.update-strategy: latest
+    argocd-image-updater.argoproj.io/write-back-method: git
+    argocd-image-updater.argoproj.io/git-branch: main
+    argocd-image-updater.argoproj.io/git-commit-user: ArgoCD Image Updater
+    argocd-image-updater.argoproj.io/git-commit-email: updater@example.com
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/tnhmar/spring-hello-devops
+    targetRevision: main
+    path: helm/spring-hello
+    helm:
+      valueFiles:
+        - values.yaml
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
