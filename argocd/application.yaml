@@ -7,14 +7,14 @@ metadata:
     argocd-image-updater.argoproj.io/image-list: tnhmar/spring-hello-app
     argocd-image-updater.argoproj.io/tnhmar_spring-hello-app.update-strategy: digest
     argocd-image-updater.argoproj.io/write-back-method: argocd
-    argocd-image-updater.argoproj.io/spring-hello.image-name: image.repository
-    argocd-image-updater.argoproj.io/spring-hello.image-tag: image.digest
+    argocd-image-updater.argoproj.io/spring-hello.values: image.digest
+    argocd-image-updater.argoproj.io/spring-hello.allow-tags: .*
 
 spec:
   project: default
   source:
     repoURL: https://github.com/tnhmar/devops-config
-    targetRevision: main
+    targetRevision: HEAD
     path: helm/spring-hello
     helm:
       valueFiles:
