@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: spring-hello
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          image: "{{ .Values.image.repository }}@{{ .Values.image.digest }}"
           ports:
             - containerPort: 8080
