@@ -6,7 +6,7 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/tnhmar/spring-hello-devops
+    repoURL: https://github.com/tnhmar/devops-config
     targetRevision: HEAD
     path: helm/spring-hello
     helm:
