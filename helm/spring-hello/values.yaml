@@ -1,6 +1,6 @@
 image:
   repository: tnhmar/spring-hello-app
-  tag: latest
+  tag: sha256:3101c5ff840eebf39f2cb714105ec7cf2637b7a0
 service:
   type: NodePort
   port: 8080
