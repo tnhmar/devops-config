@@ -6,7 +6,10 @@ metadata:
   annotations:
     argocd-image-updater.argoproj.io/image-list: tnhmar/spring-hello-app
     argocd-image-updater.argoproj.io/tnhmar_spring-hello-app.update-strategy: digest
-    argocd-image-updater.argoproj.io/write-back-method: none
+    argocd-image-updater.argoproj.io/write-back-method: argocd
+    argocd-image-updater.argoproj.io/spring-hello.image-name: image.repository
+    argocd-image-updater.argoproj.io/spring-hello.image-tag: image.tag
+
 spec:
   project: default
   source:

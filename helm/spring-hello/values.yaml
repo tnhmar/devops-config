@@ -1,6 +1,6 @@
 image:
   repository: tnhmar/spring-hello-app
-  tag: 06221220f9ff8859fe5adcee4ecbe70038cc114a
+  tag: latest
 
 service:
   type: NodePort
