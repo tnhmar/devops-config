@@ -3,9 +3,9 @@ kind: Service
 metadata:
   name: spring-hello
 spec:
-  type: { { .Values.service.type } }
+  type: {{ .Values.service.type }}
   selector:
     app: spring-hello
   ports:
-    - port: { { .Values.service.port } }
+    - port: {{ .Values.service.port }}
       targetPort: 8080
