@@ -11,3 +11,10 @@ data:
       api_url: https://registry.hub.docker.com
       credentials: pullsecret:argocd/pull-secret
       default: true
+
+  git.user: "ArgoCD Image Updater"
+  git.email: "argocd-image-updater@hj.com"
+  commit.message.template: |
+    chore: update image {{.Name}} to version {{.NewTag}}
+
+    Automated update by ArgoCD Image Updater
