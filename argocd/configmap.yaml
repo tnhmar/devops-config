@@ -8,6 +8,6 @@ data:
     registries:
     - name: Docker Hub
       prefix: docker.io
-      api_url: https://registry-1.docker.io
-      credentials: pull-secret
+      api_url: https://registry.hub.docker.com
+      credentials: pullsecret:argocd/pull-secret
       default: true

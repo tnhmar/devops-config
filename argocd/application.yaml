@@ -5,11 +5,11 @@ metadata:
   namespace: argocd
   annotations:
     argocd-image-updater.argoproj.io/image-list: spring-hello=tnhmar/spring-hello-app
-    argocd-image-updater.argoproj.io/spring-hello.update-strategy: latest
+    argocd-image-updater.argoproj.io/spring-hello.update-strategy: newest-build
     argocd-image-updater.argoproj.io/spring-hello.helm.image-name: image.repository
     argocd-image-updater.argoproj.io/spring-hello.helm.image-tag: image.tag
     argocd-image-updater.argoproj.io/spring-hello.allow-tags: regexp:^1\.0\.0-[0-9a-f]{12}$
-    argocd-image-updater.argoproj.io/spring-hello.pull-secret: dockerhub
+    argocd-image-updater.argoproj.io/spring-hello.pull-secret: pullsecret:argocd/pull-secret
     argocd-image-updater.argoproj.io/write-back-method: argocd
 
 spec:
