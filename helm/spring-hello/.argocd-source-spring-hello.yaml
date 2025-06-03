@@ -4,7 +4,7 @@ helm:
     value: tnhmar/spring-hello-app
     forcestring: true
   - name: image.tag
-    value: 1.0.0-131b48db5db7
+    value: 1.0.0-6badc68b0e7d
     forcestring: true
   - name: image.repository
     value: tnhmar/spring-hello-app
